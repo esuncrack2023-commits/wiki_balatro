@@ -5,28 +5,54 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("img/logos_backgroun/fondo_optimizado.gif") center/cover no-repeat;
 
 }
+
+
+@font-face {
+  font-family: "MiFuente";
+  src: url("tipografia/m6x11.ttf") format("truetype");
+}
+
+
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100; 
+  pointer-events: none;
+}
+
+
+
+
+
+
 
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px; /* espacio entre logo y cartas */
+    justify-content: center;
+    gap: 35px; /* espacio entre logo y cartas */
  margin-bottom: auto;
+ max-width: 500px; /* límite */
+    width: 100%;
 }
 
 
 
 
 .titulo img {
-    
-    margin-bottom: auto;
+    width: 390PX;
+    max-width: 500px; /* tamaño máximo */
+    height: auto;
 }
    
-
-
 
 
 
@@ -57,27 +83,33 @@ body{
 }
 
 
-.deck:hover .c1{
-    transform: rotate(-30deg) translate(-100px,-20px)
+.deck:hover .c1{ 
+    transform: rotate(-30deg) translate(-180px, -40px);
 }
 .deck:hover .c2{
-    transform: rotate(-15deg) translate(-50px,-10px)
+    transform: rotate(-15deg) translate(-90px, -20px);
 }
 .deck:hover .c3{
-    transform: rotate(0deg) translate(0px,-30px)
+    transform: rotate(0deg) translate(0px, -55px);
 }
 .deck:hover .c4{
-    transform: rotate(15deg) translate(50px,-10px)
+    transform: rotate(15deg) translate(90px, -20px);
 }
 .deck:hover .c5{
-    transform: rotate(30deg) translate(100px,-20px)
+    transform: rotate(30deg) translate(180px, -40px);
 }
 
-.card:hover{
+
+.deck:hover section{
     
     color: white !important;
     z-index: 10 !important;  
+
 }
+
+
+
+
 
 .card img{
     width: 100%;
@@ -90,3 +122,26 @@ body{
     transform: scale(1.1);
 }
 
+
+
+
+
+
+
+
+@font-face {
+  font-family: "balatro";
+  src: url("tipografia/balatro.otf") format("truetype");
+}
+
+#titulo-dinamico {
+  font-family: "balatro", fantasy !important;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  background: #008efd  ;
+    padding: 15px 25px;
+    border-radius: 10px;
+  image-rendering: pixelated;
+  font-style: normal;
+  margin: 40px ;
+}
