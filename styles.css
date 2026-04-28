@@ -140,7 +140,13 @@ body{
   color: rgb(255, 255, 255);
   background: #008efd  ;
     padding: 15px 25px;
-    border-radius: 10px;
+    box-shadow:
+    0 -8px 0 #1b5fbf,
+    0 8px 0 #1b5fbf,
+    -8px 0 #1b5fbf,
+    8px 0 #1b5fbf;
+
+  transition: 0.2s;
   image-rendering: pixelated;
   font-style: normal;
   margin: 40px ;

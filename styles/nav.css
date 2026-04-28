@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "balatro";
+  src: url("tipografia/balatro.otf") format("truetype");
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ESTILO BASE DE LOS BOTONES */
+.nav a {
+  /* Variables por defecto (Azul) */
+  --bg: rgb(251, 149, 1);
+  --shadow:rgb(251, 149, 1);
+
+  font-family: "balatro", fantasy !important;
+  color: white;
+  background: var(--bg);
+  border: 2px solid var(--shadow);
+  padding: 10px 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s;
+  position: relative;
+  
+  /* Usamos las variables en la sombra */
+  box-shadow:
+    0 -4px 0 var(--shadow),
+    0 4px 0 var(--shadow),
+    -4px 0 var(--shadow),
+    4px 0 var(--shadow);
+}
+
+/* PERSONALIZACIÓN POR ID (Solo cambias las variables) */
+#b1 { --bg: #fb4b3e; --shadow: #fb4b3e; } /* Verde */
+#b2 { --bg: #9c71cb; --shadow: #9c71cb; } /* Rojo */
+#b3 { --bg: #2b74f7; --shadow: #2b74f7; } /* Morado */
+#b4 { --bg: #00a6c8; --shadow: #00a6c8; } /* Naranja */
+
+/* EFECTOS GENERALES */
+.nav a:hover {
+  filter: brightness(1.2); /* Aclara el botón automáticamente al pasar el mouse */
+  transform: translateY(-2px);
+}
+
+.nav a:active {
+  transform: translateY(2px);
+  /* Quitamos las sombras al presionar para dar efecto de hundimiento */
+  box-shadow: none; 
+}

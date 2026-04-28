@@ -1,0 +1,19 @@
+/* CAPA DE ESTRELLAS */
+body {
+  background-image: url("../img/logos_backgroun/comodines_background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  /* Esto es lo que falta */
+  background-size: cover; 
+  background-attachment: fixed; /* Opcional: para que el fondo no se mueva al hacer scroll */
+  
+  /* Asegura que el body tenga el alto de la pantalla */
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+
+
+
