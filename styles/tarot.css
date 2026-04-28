@@ -53,3 +53,87 @@ body::after {
   from { background-position: 0 0; }
   to { background-position: 600px 1200px; }
 }
+
+
+
+
+
+
+@font-face {
+  font-family: "balatro";
+  src: url("../tipografia/balatro.otf") format("truetype");
+}
+
+
+
+
+
+
+
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* TITULO */
+.title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 30px;
+  font-family: "balatro", fantasy;
+  color: #eab308;
+}
+
+/* TARJETA */
+.card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  background: #1e293b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+/* EFECTO HOVER */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+}
+
+/* IMAGEN */
+.card-img {
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* CONTENIDO */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin: 0;
+  color: #a78bfa;
+  font-size: 24px;
+}
+
+.card-content p {
+  margin-top: 10px;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+
+
+
+
