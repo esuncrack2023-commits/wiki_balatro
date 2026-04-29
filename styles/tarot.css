@@ -1,3 +1,8 @@
+
+/*no tocar ( es el fondo)*/
+/*no tocar ( es el fondo)*/
+/*no tocar ( es el fondo)*/
+/*no tocar ( es el fondo)*/
 /* CAPA DE ESTRELLAS */
 body {
   background-image: url("../img/logos_backgroun/tarot_background.png");
@@ -59,11 +64,20 @@ body::after {
 
 
 
+
+
+
+
+
+
+
+
+/*esto son los elementos de la pagina */
+
 @font-face {
   font-family: "balatro";
   src: url("../tipografia/balatro.otf") format("truetype");
 }
-
 
 
 
@@ -83,57 +97,149 @@ body::after {
   font-size: 42px;
   margin-bottom: 30px;
   font-family: "balatro", fantasy;
-  color: #eab308;
+  color: #f0bb76;
 }
 
-/* TARJETA */
+/* TARJETA (sin fondo general) */
 .card {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  background: #1e293b;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-/* EFECTO HOVER */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
-}
-
-/* IMAGEN */
+/* 🟥 CAJA IMAGEN */
 .card-img {
   background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.card-img img {
+/* 🔮 CONTENEDOR EFECTO */
+.tilt-container {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  transition: 200ms;
+}
+
+.tilt-container:active {
+  transform: scale(0.97);
+}
+
+/* GRID */
+.canvas {
+  perspective: 800px;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
-/* CONTENIDO */
-.card-content {
+/* TRACKERS */
+.tracker {
+  position: relative;
+  z-index: 2;
+}
+
+.tracker:hover {
+  cursor: pointer;
+}
+
+/* CARTA */
+.tilt-card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transition: 300ms;
+  border-radius: 10px;
+}
+
+/* IMAGEN */
+.img-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BRILLO */
+.tilt-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tilt-container:hover .tilt-card::before {
+  opacity: 1;
+}
+
+/* ROTACIONES */
+.tr-1:hover ~ .tilt-card { transform: rotateX(20deg) rotateY(-10deg); }
+.tr-2:hover ~ .tilt-card { transform: rotateX(20deg) rotateY(-5deg); }
+.tr-3:hover ~ .tilt-card { transform: rotateX(20deg) rotateY(0deg); }
+.tr-4:hover ~ .tilt-card { transform: rotateX(20deg) rotateY(5deg); }
+.tr-5:hover ~ .tilt-card { transform: rotateX(20deg) rotateY(10deg); }
+
+.tr-6:hover ~ .tilt-card { transform: rotateX(10deg) rotateY(-10deg); }
+.tr-7:hover ~ .tilt-card { transform: rotateX(10deg) rotateY(-5deg); }
+.tr-8:hover ~ .tilt-card { transform: rotateX(10deg) rotateY(0deg); }
+.tr-9:hover ~ .tilt-card { transform: rotateX(10deg) rotateY(5deg); }
+.tr-10:hover ~ .tilt-card { transform: rotateX(10deg) rotateY(10deg); }
+
+.tr-11:hover ~ .tilt-card { transform: rotateX(0deg) rotateY(-10deg); }
+.tr-12:hover ~ .tilt-card { transform: rotateX(0deg) rotateY(-5deg); }
+.tr-13:hover ~ .tilt-card { transform: rotateX(0deg) rotateY(0deg); }
+.tr-14:hover ~ .tilt-card { transform: rotateX(0deg) rotateY(5deg); }
+.tr-15:hover ~ .tilt-card { transform: rotateX(0deg) rotateY(10deg); }
+
+.tr-16:hover ~ .tilt-card { transform: rotateX(-10deg) rotateY(-10deg); }
+.tr-17:hover ~ .tilt-card { transform: rotateX(-10deg) rotateY(-5deg); }
+.tr-18:hover ~ .tilt-card { transform: rotateX(-10deg) rotateY(0deg); }
+.tr-19:hover ~ .tilt-card { transform: rotateX(-10deg) rotateY(5deg); }
+.tr-20:hover ~ .tilt-card { transform: rotateX(-10deg) rotateY(10deg); }
+
+.tr-21:hover ~ .tilt-card { transform: rotateX(-20deg) rotateY(-10deg); }
+.tr-22:hover ~ .tilt-card { transform: rotateX(-20deg) rotateY(-5deg); }
+.tr-23:hover ~ .tilt-card { transform: rotateX(-20deg) rotateY(0deg); }
+.tr-24:hover ~ .tilt-card { transform: rotateX(-20deg) rotateY(5deg); }
+.tr-25:hover ~ .tilt-card { transform: rotateX(-20deg) rotateY(10deg); }
+
+/* 🟪 CAJA TEXTO */
+.card-text-box {
   padding: 20px;
+  background: #1e293b;
+  border-radius: 16px;
+  color: #e5e7eb;
+  font-family: "balatro", fantasy;
 }
 
-.card-content h2 {
-  margin: 0;
-  color: #a78bfa;
+/* TITULO */
+.card-text-box h2 {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #9c71cb;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.card-content p {
-  margin-top: 10px;
+/* TEXTO */
+.card-text-box p {
+  
+  padding: 12px 15px;
+  border-radius: 10px;
   color: #cbd5f5;
   line-height: 1.5;
 }
-
-
-
-
