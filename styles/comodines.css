@@ -10,6 +10,28 @@ body {
   font-family: "balatro", fantasy;
 }
 
+@font-face {
+  font-family: "balatro";
+  src: url("../tipografia/balatro.otf") format("truetype");
+}
+
+.title {
+  text-align: center;
+  font-size: 82px;
+  margin-bottom: 30px;
+  font-family: "balatro", fantasy;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
 /* ===== GRID ===== */
 .album-container {
   text-align: center;

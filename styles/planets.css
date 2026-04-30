@@ -270,3 +270,28 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+
+/* ===== PLANETAS VIVOS (ALINEADOS) ===== */
+.planeta {
+  animation: flotar 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* variaciones */
+.planeta:nth-child(2n) { animation-duration: 7s; }
+.planeta:nth-child(3n) { animation-duration: 5.5s; }
+.planeta:nth-child(4n) { animation-duration: 6.5s; }
+
+.planeta:nth-child(2n) { animation-delay: 0.8s; }
+.planeta:nth-child(3n) { animation-delay: 1.6s; }
+.planeta:nth-child(5n) { animation-delay: 1.2s; }
+
+/* 🚫 SIN translateY */
+@keyframes flotar {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(1deg) scale(0.98); }
+  50%  { transform: rotate(-1deg) scale(0.99); }
+  75%  { transform: rotate(0.8deg) scale(0.985); }
+  100% { transform: rotate(0deg) scale(1); }
+}
