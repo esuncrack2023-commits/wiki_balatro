@@ -3,21 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comodines</title>
+
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/comodines.css">
 </head>
+
 <body>
+
     <nav class="nav">
         <a href="index.html">Volver</a>
         <a href="comodines.html" id="b1">Comodines</a>
         <a href="tarot.html" id="b2">Tarot</a>
         <a href="spectral.html" id="b3">Espectrales</a>
-        <a href="planets.html" id="b4">Planetas </a>
+        <a href="planets.html" id="b4">Planetas</a>
     </nav>
 
+    <div class="album-container">
+
+        <div id="grid" class="grid"></div>
+
+        <div class="paginacion">
+            <button onclick="cambiarPagina(-1)">◀</button>
+            <span id="paginaTexto">Página 1</span>
+            <button onclick="cambiarPagina(1)">▶</button>
+        </div>
+
+    </div>
 
     
-    
+
+    <!-- ✅ MODAL NUEVO -->
+    <div id="tooltip" class="tooltip"></div>
+        <div class="modal-contenido card-game">
+
+            
+
+            <div id="titulo" class="card-title"></div>
+
+            <div class="card-box">
+                <span id="tipo" class="tipo"></span>
+                <div id="bonus" class="bonus"></div>
+                <div id="texto" ></div>
+            </div>
+
+            <img id="imagen" src="">
+
+         
+
+        </div>
+    </div>
+
+    <script src="js/comodines.js"></script>
+
 </body>
 </html>

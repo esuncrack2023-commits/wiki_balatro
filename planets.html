@@ -17,7 +17,108 @@
         <a href="planets.html" id="b4">Planetas </a>
     </nav>
 
+   
+    <h1 class="title">Cartas Planetarias</h1>
+   
+   
+   
+    <div class="sistema">
+        <!-- ☀️ Sol -->
+        <div class="sol"></div>
 
+        <!-- 🪐 Internos -->
+        <div class="planeta mercurio">
+            <img src="img/card_planet/Planet_Mercury.webp" alt="Mercurio">
+        </div>
+
+        <div class="planeta venus">
+            <img src="img/card_planet/Planet_Venus.webp" alt="Venus">
+        </div>
+
+        <div class="planeta tierra">
+            <img src="img/card_planet/Planet_Earth.webp" alt="Tierra">
+        </div>
+
+        <div class="planeta marte">
+            <img src="img/card_planet/Planet_Mars.webp" alt="Marte">
+        </div>
+
+        <!-- 🪨 Ceres -->
+        <div class="planeta ceres">
+            <img src="img/card_planet/secrect/Planet_Ceres.webp" alt="Ceres">
+        </div>
+
+        <!-- 🪐 Gigantes -->
+        <div class="planeta jupiter">
+            <img src="img/card_planet/Planet_Jupiter.webp" alt="Jupiter">
+        </div>
+
+        <div class="planeta saturno">
+            <img src="img/card_planet/Planet_Saturn.webp" alt="Saturno">
+        </div>
+
+        <div class="planeta urano">
+            <img src="img/card_planet/Planet_Uranus.webp" alt="Urano">
+        </div>
+
+        <div class="planeta neptuno">
+            <img src="img/card_planet/Planet_Neptune.webp" alt="Neptuno">
+        </div>
+
+        <!-- ❄️ Enanos -->
+        <div class="planeta pluton">
+            <img src="img/card_planet/Planet_Pluto.webp" alt="Pluton">
+        </div>
+
+        <div class="planeta eris">
+            <img src="img/card_planet/secrect/Planet_Eris.webp" alt="Eris">
+        </div>
+
+        <!-- ❓ Misterio -->
+        <div class="planeta planeta-x">
+            <img src="img/card_planet/secrect/Planet_X.webp" alt="Planeta X">
+        </div>
+
+    </div>
+  
+    
+    
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido" id="modalCard">
+
+            <button id="cerrar">✖</button>
+
+            <div class="card-game">
+                <div class="card-title" id="titulo-planeta"></div>
+
+                <div class="card-box">
+                    <div class="nivel" id="nivel"></div>
+                    <div class="tipo" id="tipo"></div>
+
+                    <div class="bonus">
+                        <span class="multi" id="multi"></span> y 
+                        <span class="fichas" id="fichas"></span>
+                    </div>
+
+                    <p id="texto-planeta"></p>
+                </div>
+
+                <img id="img-planeta" src="" alt="">
+                <button class="btn-planeta">Planeta</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/planets.js"></script>
 
 </body>
 </html>
