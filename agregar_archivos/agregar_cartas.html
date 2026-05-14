@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles_admin.css">
+</head>
+<body>
+    
+    <!-- ===== PANEL ADMIN ===== -->
+
+    <div class="admin-panel">
+
+        <h2>Agregar Comodín</h2>
+
+        <input type="text" id="nombre" placeholder="Nombre">
+
+        <textarea id="desc" placeholder="Descripción"></textarea>
+
+        <select id="categoria">
+            <option value="comun">Común</option>
+            <option value="inusual">Inusual</option>
+            <option value="rara">Rara</option>
+            <option value="legendario">Legendario</option>
+        </select>
+
+        <input type="number" id="orden" placeholder="Orden">
+
+        <input type="file" id="imagen" accept="image/png, image/jpeg, image/webp">
+
+        <button id="guardarCarta">
+            Guardar Carta
+        </button>
+
+    </div>
+
+    <script type="module" src="agregar_cartas.js"></script>
+
+</body>
+</html>
